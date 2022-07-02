@@ -7,8 +7,8 @@ common:
   prepend_insert_url: true
   exclude_remarks: ["(到期|剩余流量|时间|官网|产品|平台)"]
   include_remarks: []
-  enable_filter: false
-  filter_script: ""
+  enable_filter: true
+  filter_script: "path:snippets/filter.js"
   default_external_config: "" # config/example_external_config.yml
   base_path: base
   clash_rule_base: base/all_base.tpl
@@ -28,12 +28,14 @@ userinfo:
   stream_rule:
   - {match: "^剩余流量：(.*?)\\|总流量：(.*)$", replace: "total=$2&left=$1"}
   - {match: "^剩余流量：(.*?) (.*)$", replace: "total=$1&left=$2"}
+  - {match: "^剩余流量：(.*?)[|/\\ ]?(.*)$", replace: "total=$1&left=$2"}
   - {match: "^Bandwidth: (.*?)/(.*)$", replace: "used=$1&total=$2"}
   - {match: "^.*剩余(.*?)(?:\\s*?)@(?:.*)$", replace: "total=$1"}
   - {match: "^.*?流量:(.*?) 剩:(?:.*)$", replace: "total=$1"}
   time_rule:
   - {match: "^过期时间：(\\d+)-(\\d+)-(\\d+) (\\d+):(\\d+):(\\d+)$", replace: "$1:$2:$3:$4:$5:$6"}
   - {match: "^到期时间(:|：)(\\d+)-(\\d+)-(\\d+)$", replace: "$1:$2:$3:0:0:0"}
+  - {match: "^.*有效期(:|：)(\\d+)-(\\d+)-(\\d+)\\+?(\\d+):(\\d+):(\\d+)$", replace: "$1:$2:$3:$4:$5:$6"}
   - {match: "^Smart Access expire: (\\d+)/(\\d+)/(\\d+)$", replace: "$1:$2:$3:0:0:0"}
   - {match: "^.*?流量:(?:.*?) 剩:(.*?)天$", replace: "left=$1d"}
 
