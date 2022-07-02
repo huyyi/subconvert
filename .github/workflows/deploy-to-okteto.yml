@@ -27,6 +27,10 @@ jobs:
         with:
           token: ${{ secrets.OKTETO_TOKEN }}
 
+      - name: update config
+        run: |
+          sed -i 's/__PREFIX_URL__/${{ secrets.OKTETO_URL }}/' base/pref.yml
+
       - name: deploy
         uses: docker://okteto/okteto
         with:

@@ -58,7 +58,7 @@ node_pref:
 
 managed_config:
   write_managed_config: true
-  managed_config_prefix: "http://127.0.0.1:25500"
+  managed_config_prefix: "https://__PREFIX_URL__"
   config_update_interval: 86400
   config_update_strict: false
   quanx_device_id: ""
