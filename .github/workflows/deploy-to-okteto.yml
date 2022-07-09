@@ -5,12 +5,6 @@ on:
   push:
     branches:
       - master
-    paths:
-      - 'base/*'
-      - 'okteto*'
-      - '.github/workflows/*'
-      - 'compose.yml'
-      - 'Dockerfile'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch: ~
