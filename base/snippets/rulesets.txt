@@ -4,7 +4,7 @@
 🛑 全球拦截,https://raw.githubusercontent.com/NobyDa/Script/master/Surge/AdRule.list
 🛑 全球拦截,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Guard/Privacy.list
 🌍 国外媒体,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/StreamingMedia/Streaming.list
-🌍 国外媒体,rules/self-proxy.list
+🌍 国外媒体,https://raw.githubusercontent.com/huyyi/subconvert/master/base/rules/self-proxy.list
 🔰 节点选择,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Global.list
 🍎 苹果服务,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Extra/Apple/AppStore.list
 🍎 苹果服务,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Extra/Apple/AppStoreConnect.list
@@ -12,7 +12,7 @@
 🎯 全球直连,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Unbreak.list
 🎯 全球直连,rules/NobyDa/Surge/Download.list
 🎯 全球直连,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Extra/ChinaIP.list
-🎯 全球直连,rules/self-direct.list
+🎯 全球直连,https://raw.githubusercontent.com/huyyi/subconvert/master/base/rules/self-direct.list
 🎯 全球直连,rules/LocalAreaNetwork.list
 🎯 全球直连,[]GEOIP,CN
 🐟 漏网之鱼,[]FINAL
