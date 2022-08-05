@@ -1,6 +1,6 @@
 version: "3"
 services:
   subconvert:
-    build: ${OKTETO_BUILD_SUBCONVERT_IMAGE}
+    image: ghcr.io/huyyi/subconvert:latest
     ports:
       - 25500:25500
