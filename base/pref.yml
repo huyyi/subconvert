@@ -35,7 +35,7 @@ userinfo:
   time_rule:
   - {match: "^过期时间：(\\d+)-(\\d+)-(\\d+) (\\d+):(\\d+):(\\d+)$", replace: "$1:$2:$3:$4:$5:$6"}
   - {match: "^到期时间(:|：)(\\d+)-(\\d+)-(\\d+)$", replace: "$1:$2:$3:0:0:0"}
-  - {match: "^.*有效期(:|：)(\\d+)-(\\d+)-(\\d+)\\+?(\\d+):(\\d+):(\\d+)$", replace: "$1:$2:$3:$4:$5:$6"}
+  - {match: "^.*?有效期(:|：)(\\d+)-(\\d+)-(\\d+)[+ ]?([0-9:]+)$", replace: "$2:$3:$4:$5"}
   - {match: "^Smart Access expire: (\\d+)/(\\d+)/(\\d+)$", replace: "$1:$2:$3:0:0:0"}
   - {match: "^.*?流量:(?:.*?) 剩:(.*?)天$", replace: "left=$1d"}
 
@@ -137,7 +137,7 @@ server:
   serve_file_root: ""
 
 advanced:
-  log_level: info
+  log_level: verbose
   print_debug_info: false
   max_pending_connections: 10240
   max_concurrent_threads: 2
